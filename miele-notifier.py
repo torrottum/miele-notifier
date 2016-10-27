@@ -30,7 +30,7 @@ def parse_machines(config):
     r = requests.get('http://' + config['ip'] + '/LaundryState?lg=1', auth=(config['username'], config['password']))
 
     if r.status_code == 401:
-        exit_with_msg('Wrong username or password in config.json')
+        exit_with_msg('Wrong username or password in config.json', 1)
 
     soup = BeautifulSoup(r.text, 'html.parser')
     for img in soup.find_all('img', {'src': ['pic/symbolpw.gif', 'pic/symbolpt.gif']}):
