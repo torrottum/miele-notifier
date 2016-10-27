@@ -1,6 +1,6 @@
 # miele-notifier
 Small python program to send Pushbullet notifications when Miele laundry machines are done.
-It polls the laundry website every 60 seconds and checks if the machine is in use, if not a Pushbullet note is sent
+It polls the laundry website every 60 seconds and checks if the machine(s) is in use, if not a Pushbullet note is sent. When all machines are done, it exits.
 
 ## Installation & configuration
 1. Clone the repo `git clone https://github.com/torrottum/miele-notifier`
@@ -50,4 +50,6 @@ Waiting 60s before next check ...
 Dryer 14 is in use
 Washer 1 not in use, sending notification
 Waiting 60s before next check ...
+Dryer 14 not in use, sending notification
+All done
 ```
